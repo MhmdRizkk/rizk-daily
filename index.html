@@ -10,9 +10,9 @@
 <title>Rizk</title>
 <link rel="apple-touch-icon" href="icon-180.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="icon-180.png" />
-<link rel="apple-touch-icon" sizes="167x167" href="icon-167.png" />
-<link rel="apple-touch-icon" sizes="152x152" href="icon-152.png" />
-<link rel="apple-touch-icon" sizes="120x120" href="icon-120.png" />
+<link rel="apple-touch-icon" sizes="167x167" href="icon-180.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="icon-180.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="icon-180.png" />
 <link rel="shortcut icon" href="icon-180.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -84,7 +84,7 @@ body {
   to   { opacity:1; transform:translateY(0); }
 }
 
-/* ── PAGE HEADER ── */
+/* PAGE HEADER */
 .ph {
   padding: 8px 20px 10px;
   position: sticky; top: 0; z-index: 10;
@@ -109,12 +109,7 @@ body {
   margin-top: 2px;
   font-weight: 400;
 }
-.ph-badge {
-  font-size: 12px; font-weight: 600;
-  background: var(--blue); color: white;
-  padding: 4px 11px; border-radius: 20px;
-  margin-bottom: 6px;
-}
+
 .ph-nav {
   display: flex; align-items: center; gap: 8px;
   margin-bottom: 6px;
@@ -129,14 +124,14 @@ body {
 }
 .nav-btn:active { background: var(--label4); }
 
-/* ── SECTION LABEL ── */
+/* SECTION LABEL */
 .sl {
   font-size: 13px; font-weight: 600; letter-spacing: 0.3px;
   text-transform: uppercase; color: var(--label2);
   padding: 20px 20px 8px;
 }
 
-/* ── GROUPED LIST ── */
+/* GROUPED LIST */
 .group {
   background: var(--surface);
   border-radius: 16px;
@@ -162,74 +157,6 @@ body {
   background: var(--sep);
 }
 
-/* ── CHECK ROWS ── */
-.ck-circle {
-  width: 28px; height: 28px; border-radius: 50%;
-  border: 2px solid var(--sep-op);
-  flex-shrink: 0;
-  display: flex; align-items: center; justify-content: center;
-  transition: background 0.2s, border-color 0.2s;
-}
-.row.done .ck-circle { background: var(--green); border-color: var(--green); }
-
-.ck-svg {
-  width: 14px; height: 14px;
-  stroke: white; stroke-width: 2.5;
-  stroke-linecap: round; stroke-linejoin: round;
-  fill: none; opacity: 0;
-  transition: opacity 0.12s;
-}
-.row.done .ck-svg { opacity: 1; }
-
-.ck-texts { flex: 1; }
-.ck-title {
-  font-size: 17px; font-weight: 400; color: var(--label);
-  transition: color 0.2s;
-}
-.row.done .ck-title {
-  color: var(--label3);
-  text-decoration: line-through;
-  text-decoration-color: var(--label3);
-}
-.ck-sub { font-size: 12px; color: var(--label2); margin-top: 1px; }
-
-.dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
-
-/* ── PROGRESS ── */
-.prog-card {
-  background: var(--surface);
-  border-radius: 16px;
-  margin: 0 16px 10px;
-  padding: 14px 16px;
-}
-.prog-top {
-  display: flex; justify-content: space-between; align-items: baseline;
-  margin-bottom: 10px;
-}
-.prog-label { font-size: 15px; font-weight: 600; }
-.prog-frac  { font-size: 13px; color: var(--label2); font-weight: 500; }
-.prog-track { height: 6px; background: var(--label4); border-radius: 3px; overflow: hidden; }
-.prog-fill  {
-  height: 100%; border-radius: 3px; background: var(--green);
-  transition: width 0.4s cubic-bezier(0.34,1.56,0.64,1);
-}
-
-/* ── EVENT CARDS ── */
-.ev-card {
-  background: var(--surface);
-  border-radius: 16px;
-  margin: 0 16px 10px;
-  padding: 14px 16px;
-  display: flex; align-items: center; gap: 14px;
-  transition: transform 0.1s;
-}
-.ev-card:active { transform: scale(0.98); }
-.ev-info { flex: 1; min-width: 0; }
-.ev-name {
-  font-size: 15px; font-weight: 600; color: var(--label);
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-}
-.ev-meta { font-size: 12px; color: var(--label2); margin-top: 2px; }
 .ev-badge {
   font-size: 11px; font-weight: 600;
   padding: 3px 9px; border-radius: 20px;
@@ -242,7 +169,7 @@ body {
 .b-birthday { background:rgba(255,45,85,.1);  color:var(--pink);   }
 .b-finance  { background:rgba(52,199,89,.1);  color:#248A3D;       }
 
-/* ── MINI CAL ── */
+/* MINI CAL */
 .mini-cal {
   background: var(--surface); border-radius: 16px;
   margin: 0 16px 12px; padding: 12px 8px 8px;
@@ -279,7 +206,7 @@ body {
 .cal-name { font-size: 15px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .cal-sub  { font-size: 12px; color: var(--label2); margin-top: 2px; }
 
-/* ── BUDGET CARD ── */
+/* BUDGET CARD */
 .bud-card {
   margin: 0 16px 10px;
   background: var(--blue);
@@ -294,6 +221,72 @@ body {
 .bud-fill { height: 100%; border-radius: 2px; background: white; transition: width .5s cubic-bezier(.34,1.56,.64,1); }
 .bud-fill.ov { background: rgba(255,255,255,0.5); }
 .bud-meta { display: flex; justify-content: space-between; font-size: 12px; opacity: 0.8; font-weight: 500; }
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 0 16px 10px;
+}
+.stat-card {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 12px 10px;
+  min-width: 0;
+}
+.stat-v {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--label);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.stat-l {
+  font-size: 11px;
+  color: var(--label2);
+  margin-top: 3px;
+}
+.cat-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 16px;
+  background: var(--surface);
+  position: relative;
+}
+.cat-row + .cat-row::before {
+  content:'';
+  position:absolute;
+  top:0;
+  left:60px;
+  right:0;
+  height:0.5px;
+  background:var(--sep);
+}
+.cat-main { flex: 1; min-width: 0; }
+.cat-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.cat-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cat-amt { flex-shrink: 0; }
+.cat-bar {
+  height: 5px;
+  background: var(--label4);
+  border-radius: 3px;
+  margin-top: 7px;
+  overflow: hidden;
+}
+.cat-fill {
+  height: 100%;
+  border-radius: 3px;
+  background: var(--blue);
+}
+.cat-meta { font-size: 11px; color: var(--label2); margin-top: 4px; }
 
 /* expense row */
 .exp-row {
@@ -342,7 +335,7 @@ body {
 }
 .add-btn:active { background: rgba(0,122,255,.06); }
 
-/* ── SHEET ── */
+/* SHEET */
 .sheet-bg {
   display: none; position: fixed; inset: 0; z-index: 200;
   background: rgba(0,0,0,.35);
@@ -384,7 +377,7 @@ body {
 .ios-p { background:var(--blue); color:white; }
 .ios-s { background:var(--bg); color:var(--blue); }
 
-/* ── TAB BAR ── */
+/* TAB BAR */
 .tabbar {
   position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
   max-width: 430px; margin: 0 auto;
@@ -409,17 +402,12 @@ body {
 .tab-lb { font-size: 10px; font-weight: 500; color: var(--label3); transition: color .15s; }
 .tab.active .tab-lb { color: var(--blue); }
 
-/* ── EMPTY STATE ── */
+/* EMPTY STATE */
 .empty { text-align:center; padding:40px 20px; }
 .empty-ic { font-size:40px; margin-bottom:12px; }
 .empty-t  { font-size:15px; font-weight:500; color:var(--label2); }
 .empty-s  { font-size:13px; color:var(--label3); margin-top:4px; }
 
-/* bounce anim */
-@keyframes ckBounce {
-  0%{transform:scale(1)} 35%{transform:scale(.82)} 70%{transform:scale(1.18)} 100%{transform:scale(1)}
-}
-.ck-bounce { animation: ckBounce .28s ease; }
 </style>
 </head>
 <body>
@@ -427,41 +415,14 @@ body {
   <div class="sb"></div>
   <div class="scroll" id="scroll">
 
-    <!-- ████ TODAY ████ -->
-    <div class="page active" id="page-today">
-      <div class="ph">
-        <div class="ph-left">
-          <div class="ph-title" id="todayTitle">Today</div>
-          <div class="ph-sub" id="todaySub">—</div>
-        </div>
-        <div class="ph-badge" id="badge">0/0</div>
-      </div>
-
-      <!-- Progress -->
-      <div class="prog-card">
-        <div class="prog-top">
-          <span class="prog-label">Daily Progress</span>
-          <span class="prog-frac" id="progFrac">0 of 0 done</span>
-        </div>
-        <div class="prog-track"><div class="prog-fill" id="progFill" style="width:0%"></div></div>
-      </div>
-
-      <div class="sl">Tasks</div>
-      <div class="group" id="ckGroup"></div>
-
-      <div class="sl">Today's Events</div>
-      <div id="todayEvs"></div>
-    </div>
-
-    <!-- ████ CALENDAR ████ -->
-    <div class="page" id="page-calendar">
+    <div class="page active" id="page-calendar">
       <div class="ph">
         <div class="ph-left">
           <div class="ph-title" id="calTitle">Calendar</div>
         </div>
         <div class="ph-nav">
-          <button class="nav-btn" id="calPrev">‹</button>
-          <button class="nav-btn" id="calNext">›</button>
+          <button class="nav-btn" id="calPrev">&lt;</button>
+          <button class="nav-btn" id="calNext">&gt;</button>
         </div>
       </div>
       <div class="mini-cal">
@@ -471,16 +432,16 @@ body {
       <div id="calList"></div>
     </div>
 
-    <!-- ████ EXPENSES ████ -->
+    <!-- Expenses -->
     <div class="page" id="page-expenses">
       <div class="ph">
         <div class="ph-left">
           <div class="ph-title">Expenses</div>
-          <div class="ph-sub" id="expSub">—</div>
+          <div class="ph-sub" id="expSub">-</div>
         </div>
         <div class="ph-nav">
-          <button class="nav-btn" id="budPrev">‹</button>
-          <button class="nav-btn" id="budNext">›</button>
+          <button class="nav-btn" id="budPrev">&lt;</button>
+          <button class="nav-btn" id="budNext">&gt;</button>
         </div>
       </div>
 
@@ -494,6 +455,24 @@ body {
         </div>
       </div>
 
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-v" id="statCount">0</div>
+          <div class="stat-l">Transactions</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-v" id="statAvg">$0</div>
+          <div class="stat-l">Average</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-v" id="statTop">-</div>
+          <div class="stat-l">Top category</div>
+        </div>
+      </div>
+
+      <div class="sl">Category Stats</div>
+      <div class="group" id="catStats"></div>
+
       <div class="sl">This Month</div>
       <div class="group" id="expGroup"></div>
       <button class="add-btn" id="addExpBtn"><span style="font-size:18px;font-weight:300">+</span> Add Expense</button>
@@ -502,24 +481,20 @@ body {
 
   </div><!-- /scroll -->
 
-  <!-- ████ TAB BAR ████ -->
+  <!-- Tab bar -->
   <div class="tabbar">
-    <button class="tab active" data-tab="today">
-      <span class="tab-ic">☀️</span>
-      <span class="tab-lb">Today</span>
-    </button>
-    <button class="tab" data-tab="calendar">
-      <span class="tab-ic">📅</span>
+    <button class="tab active" data-tab="calendar">
+      <span class="tab-ic">Cal</span>
       <span class="tab-lb">Calendar</span>
     </button>
     <button class="tab" data-tab="expenses">
-      <span class="tab-ic">💳</span>
+      <span class="tab-ic">$</span>
       <span class="tab-lb">Expenses</span>
     </button>
   </div>
 </div>
 
-<!-- ████ SHEET ████ -->
+<!-- Expense sheet -->
 <div class="sheet-bg" id="expSheet">
   <div class="sheet">
     <div class="sh-handle"></div>
@@ -535,13 +510,13 @@ body {
     <div class="sh-field">
       <label class="sh-lbl">Category</label>
       <select class="sh-inp" id="expCat">
-        <option value="Food">🍽️  Food</option>
-        <option value="Transport">🚌  Transport</option>
-        <option value="Entertainment">🎮  Entertainment</option>
-        <option value="Health">💊  Health</option>
-        <option value="Personal">🧴  Personal</option>
-        <option value="Social">🌙  Social</option>
-        <option value="Other">📦  Other</option>
+        <option value="Food">Food</option>
+        <option value="Transport">Transport</option>
+        <option value="Entertainment">Entertainment</option>
+        <option value="Health">Health</option>
+        <option value="Personal">Personal</option>
+        <option value="Social">Social</option>
+        <option value="Other">Other</option>
       </select>
     </div>
     <div class="sh-acts">
@@ -552,76 +527,66 @@ body {
 </div>
 
 <script>
-// ═══════════════════════════════════
+// -------------------------------------------------------------------
 //  DATA
-// ═══════════════════════════════════
+// -------------------------------------------------------------------
 const INCOME = 1000;
 const ML = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-const MS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 const DS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-const DF = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 function pad(n){ return String(n).padStart(2,'0'); }
+function money(n){ return '$' + (Number(n)||0).toFixed(0); }
+function esc(s){
+  return String(s).replace(/[&<>"']/g, ch => ({
+    '&':'&amp;',
+    '<':'&lt;',
+    '>':'&gt;',
+    '"':'&quot;',
+    "'":'&#39;'
+  }[ch]));
+}
 
-const CAT_COLOR = {
-  Prayer:'#AF52DE', Hygiene:'#5AC8FA', Gaming:'#007AFF',
-  Social:'#FF2D55', Finance:'#34C759', 'Self-Growth':'#FF9500',
-  Errands:'#8E8E93', Discipline:'#FF3B30'
-};
 const CAT_BG = {
   Food:'#FFF3E0',Transport:'#E3F2FD',Entertainment:'#F3E5F5',
   Health:'#E8F5E9',Personal:'#E0F7FA',Social:'#FCE4EC',Other:'#F5F5F5'
 };
 const CAT_EMO = {
-  Food:'🍽️',Transport:'🚌',Entertainment:'🎮',
-  Health:'💊',Personal:'🧴',Social:'🌙',Other:'📦'
+  Food:'Fo',Transport:'Tr',Entertainment:'En',
+  Health:'He',Personal:'Pe',Social:'So',Other:'Ot'
 };
 
-const TASKS = [
-  {id:'p1',title:'Fajr',        sub:'Dawn prayer',        cat:'Prayer'},
-  {id:'p2',title:'Dhuhr',       sub:'Noon prayer',        cat:'Prayer'},
-  {id:'p3',title:'Asr',         sub:'Afternoon prayer',   cat:'Prayer'},
-  {id:'p4',title:'Maghrib',     sub:'Sunset prayer',      cat:'Prayer'},
-  {id:'p5',title:'Isha',        sub:'Night prayer',       cat:'Prayer'},
-  {id:'h1',title:'Brush teeth ×2', sub:'Morning & night', cat:'Hygiene'},
-  {id:'h2',title:'Shower',      sub:'Daily hygiene',      cat:'Hygiene'},
-  {id:'h3',title:'Skincare',    sub:'Daily hygiene',      cat:'Hygiene'},
-  {id:'d1',title:'Stayed Clean',sub:'Discipline check-in',cat:'Discipline'},
-  {id:'sg',title:'Self-growth', sub:'Daily goal',         cat:'Self-Growth'},
-];
-
 const EVENTS = [
-  {date:'*-04-18',name:"Sister's Birthday 🎂",  type:'birthday',r:true},
-  {date:'*-04-26',name:"Your Birthday 🎂",       type:'birthday',r:true},
-  {date:'*-10-24',name:"Yehya's Birthday 🎂",    type:'birthday',r:true},
-  {date:'*-06-27',name:"Khalil's Birthday 🎂",   type:'birthday',r:true},
-  {date:'*-03-18',name:"Ahmad's Birthday 🎂",    type:'birthday',r:true},
-  {date:'*-*-*',  name:'Work',                   type:'work',time:'9:00 – 17:00',wd:[1,2,3,4,5]},
-  {date:'2026-01-29',name:'Salary Day 💰',type:'finance'},
-  {date:'2026-02-26',name:'Salary Day 💰',type:'finance'},
-  {date:'2026-03-31',name:'Salary Day 💰',type:'finance'},
-  {date:'2026-04-30',name:'Salary Day 💰',type:'finance'},
-  {date:'2026-05-29',name:'Salary Day 💰',type:'finance'},
-  {date:'2026-06-30',name:'Salary Day 💰',type:'finance'},
-  {date:'2026-07-31',name:'Salary Day 💰',type:'finance'},
-  {date:'2026-08-31',name:'Salary Day 💰',type:'finance'},
-  {date:'2026-09-30',name:'Salary Day 💰',type:'finance'},
-  {date:'2026-10-29',name:'Salary Day 💰',type:'finance'},
-  {date:'2026-11-30',name:'Salary Day 💰',type:'finance'},
-  {date:'2026-12-31',name:'Salary Day 💰',type:'finance'},
-  {date:'2026-05-06',name:'Haircut ✂️',type:'personal'},
-  {date:'2026-06-17',name:'Haircut ✂️',type:'personal'},
-  {date:'2026-07-29',name:'Haircut ✂️',type:'personal'},
-  {date:'2026-09-09',name:'Haircut ✂️',type:'personal'},
-  {date:'2026-10-21',name:'Haircut ✂️',type:'personal'},
-  {date:'2026-12-02',name:'Haircut ✂️',type:'personal'},
+  {date:'*-04-18',name:"Sister's Birthday",type:'birthday',r:true},
+  {date:'*-04-26',name:"Your Birthday",type:'birthday',r:true},
+  {date:'*-10-24',name:"Yehya's Birthday",type:'birthday',r:true},
+  {date:'*-06-27',name:"Khalil's Birthday",type:'birthday',r:true},
+  {date:'*-03-18',name:"Ahmad's Birthday",type:'birthday',r:true},
+  {date:'*-*-*',name:'Work',type:'work',time:'9:00 - 17:00',wd:[1,2,3,4,5]},
+  {date:'2026-01-29',name:'Salary Day',type:'finance'},
+  {date:'2026-02-26',name:'Salary Day',type:'finance'},
+  {date:'2026-03-31',name:'Salary Day',type:'finance'},
+  {date:'2026-04-30',name:'Salary Day',type:'finance'},
+  {date:'2026-05-29',name:'Salary Day',type:'finance'},
+  {date:'2026-06-30',name:'Salary Day',type:'finance'},
+  {date:'2026-07-31',name:'Salary Day',type:'finance'},
+  {date:'2026-08-31',name:'Salary Day',type:'finance'},
+  {date:'2026-09-30',name:'Salary Day',type:'finance'},
+  {date:'2026-10-29',name:'Salary Day',type:'finance'},
+  {date:'2026-11-30',name:'Salary Day',type:'finance'},
+  {date:'2026-12-31',name:'Salary Day',type:'finance'},
+  {date:'2026-05-06',name:'Haircut',type:'personal'},
+  {date:'2026-06-17',name:'Haircut',type:'personal'},
+  {date:'2026-07-29',name:'Haircut',type:'personal'},
+  {date:'2026-09-09',name:'Haircut',type:'personal'},
+  {date:'2026-10-21',name:'Haircut',type:'personal'},
+  {date:'2026-12-02',name:'Haircut',type:'personal'},
   {date:'*-01-01',name:"New Year's Day",type:'national',r:true},
   {date:'*-01-06',name:"Armenian Christmas",type:'national',r:true},
   {date:'*-02-09',name:"Saint Maroun Day",type:'national',r:true},
   {date:'*-03-25',name:"Feast of the Annunciation",type:'national',r:true},
   {date:'*-05-01',name:"Labour Day",type:'national',r:true},
   {date:'*-08-15',name:"Assumption Day",type:'national',r:true},
-  {date:'*-11-22',name:"Independence Day 🇱🇧",type:'national',r:true},
-  {date:'*-12-25',name:"Christmas 🎄",type:'national',r:true},
+  {date:'*-11-22',name:"Independence Day",type:'national',r:true},
+  {date:'*-12-25',name:"Christmas",type:'national',r:true},
   {date:'2026-04-03',name:"Good Friday",type:'national'},
   {date:'2026-04-06',name:"Easter Sunday",type:'national'},
   {date:'2026-04-10',name:"Orthodox Good Friday",type:'national'},
@@ -630,39 +595,32 @@ const EVENTS = [
   {date:'2026-01-20',name:"Arba'een",type:'shia'},
   {date:'2026-02-25',name:"Prophet's Birthday (Mawlid)",type:'shia'},
   {date:'2026-03-09',name:"Imam Mahdi's Birthday",type:'shia'},
-  {date:'2026-03-21',name:"Eid al-Fitr 🌙",type:'shia'},
-  {date:'2026-05-27',name:"Eid al-Adha 🐑",type:'shia'},
+  {date:'2026-03-21',name:"Eid al-Fitr",type:'shia'},
+  {date:'2026-05-27',name:"Eid al-Adha",type:'shia'},
   {date:'2026-06-17',name:"Islamic New Year",type:'shia'},
-  {date:'2026-06-26',name:"Ashura 🖤",type:'shia'},
+  {date:'2026-06-26',name:"Ashura",type:'shia'},
   {date:'2026-08-25',name:"Prophet's Birthday",type:'shia'},
 ];
 
-// ═══════════════════════════════════
+// -------------------------------------------------------------------
 //  STATE
-// ═══════════════════════════════════
+// -------------------------------------------------------------------
 let calDate   = new Date();
 let budDate   = new Date();
-let expenses  = JSON.parse(localStorage.getItem('rizk_exp2') || '{}');
-function saveExp(){ localStorage.setItem('rizk_exp2', JSON.stringify(expenses)); }
-
-// checks: auto-reset daily
-function todayKey(){
-  const d=new Date();
-  return `chk${d.getFullYear()}${d.getMonth()}${d.getDate()}`;
+const EXP_KEY = 'rizk_exp2';
+function loadExpenses(){
+  try {
+    return JSON.parse(localStorage.getItem(EXP_KEY) || '{}') || {};
+  } catch(e) {
+    return {};
+  }
 }
-function loadChecks(){
-  // purge old keys
-  Object.keys(localStorage).filter(k=>k.startsWith('chk') && k!==todayKey())
-    .forEach(k=>localStorage.removeItem(k));
-  return JSON.parse(localStorage.getItem(todayKey())||'{}');
-}
-function saveChecks(s){ localStorage.setItem(todayKey(), JSON.stringify(s)); }
+let expenses = loadExpenses();
+function saveExp(){ localStorage.setItem(EXP_KEY, JSON.stringify(expenses)); }
 
-let checks = loadChecks();
-
-// ═══════════════════════════════════
+// -------------------------------------------------------------------
 //  HELPERS
-// ═══════════════════════════════════
+// -------------------------------------------------------------------
 function sameDay(a,b){
   return a.getFullYear()===b.getFullYear()&&a.getMonth()===b.getMonth()&&a.getDate()===b.getDate();
 }
@@ -678,100 +636,14 @@ function badgeCls(t){
   return {work:'b-work',shia:'b-shia',national:'b-national',
           personal:'b-personal',birthday:'b-birthday',finance:'b-finance'}[t]||'b-personal';
 }
-function dotCol(t){
-  return {work:'#007AFF',shia:'#AF52DE',national:'#5AC8FA',
-          personal:'#FF9500',birthday:'#FF2D55',finance:'#34C759'}[t]||'#8E8E93';
-}
 function typeLbl(t){
   return {work:'Work',shia:'Islamic',national:'Holiday',
           personal:'Personal',birthday:'Birthday',finance:'Finance'}[t]||t;
 }
 
-// ═══════════════════════════════════
-//  HEADER
-// ═══════════════════════════════════
-function updateHeader(){
-  const n=new Date();
-  document.getElementById('todayTitle').textContent=`${MS[n.getMonth()]} ${n.getDate()}`;
-  document.getElementById('todaySub').textContent=DF[n.getDay()];
-}
-updateHeader();
-setInterval(updateHeader,30000);
-
-// ═══════════════════════════════════
-//  CHECKLIST
-// ═══════════════════════════════════
-function renderChecks(){
-  const g=document.getElementById('ckGroup');
-  g.innerHTML='';
-  let done=0;
-  TASKS.forEach(t=>{
-    const isDone=!!checks[t.id];
-    if(isDone) done++;
-    const row=document.createElement('div');
-    row.className='row'+(isDone?' done':'');
-    row.innerHTML=`
-      <div class="ck-circle">
-        <svg class="ck-svg" viewBox="0 0 14 14"><polyline points="2,7 5.5,10.5 12,3.5"/></svg>
-      </div>
-      <div class="ck-texts">
-        <div class="ck-title">${t.title}</div>
-        <div class="ck-sub">${t.sub}</div>
-      </div>
-      <div class="dot" style="background:${CAT_COLOR[t.cat]||'#8E8E93'}"></div>
-    `;
-    row.addEventListener('click',()=>{
-      checks[t.id]=!checks[t.id];
-      saveChecks(checks);
-      row.classList.toggle('done');
-      const ic=row.querySelector('.ck-circle');
-      ic.classList.add('ck-bounce');
-      setTimeout(()=>ic.classList.remove('ck-bounce'),300);
-      updateProg();
-    });
-    g.appendChild(row);
-  });
-  updateProg(done);
-}
-
-function updateProg(d){
-  const total=TASKS.length;
-  const done=d!==undefined?d:TASKS.filter(t=>checks[t.id]).length;
-  const pct=total?(done/total)*100:0;
-  document.getElementById('progFill').style.width=pct+'%';
-  document.getElementById('progFrac').textContent=`${done} of ${total} done`;
-  document.getElementById('badge').textContent=`${done}/${total}`;
-}
-
-// ═══════════════════════════════════
-//  TODAY EVENTS
-// ═══════════════════════════════════
-function renderTodayEvs(){
-  const a=document.getElementById('todayEvs');
-  a.innerHTML='';
-  const evs=eventsFor(new Date());
-  if(!evs.length){
-    a.innerHTML=`<div class="empty"><div class="empty-ic">🗓️</div><div class="empty-t">Nothing scheduled</div><div class="empty-s">Enjoy your free time</div></div>`;
-    return;
-  }
-  evs.forEach(ev=>{
-    const c=document.createElement('div');
-    c.className='ev-card';
-    c.innerHTML=`
-      <div class="dot" style="background:${dotCol(ev.type)};width:10px;height:10px"></div>
-      <div class="ev-info">
-        <div class="ev-name">${ev.name}</div>
-        <div class="ev-meta">${ev.time?ev.time+' · ':''}${typeLbl(ev.type)}</div>
-      </div>
-      <span class="ev-badge ${badgeCls(ev.type)}">${typeLbl(ev.type)}</span>
-    `;
-    a.appendChild(c);
-  });
-}
-
-// ═══════════════════════════════════
+// -------------------------------------------------------------------
 //  CALENDAR
-// ═══════════════════════════════════
+// -------------------------------------------------------------------
 function renderCal(){
   const y=calDate.getFullYear(), m=calDate.getMonth();
   document.getElementById('calTitle').textContent=`${ML[m]} ${y}`;
@@ -865,14 +737,64 @@ function renderCal(){
 document.getElementById('calPrev').onclick=()=>{ calDate=new Date(calDate.getFullYear(),calDate.getMonth()-1,1); renderCal(); };
 document.getElementById('calNext').onclick=()=>{ calDate=new Date(calDate.getFullYear(),calDate.getMonth()+1,1); renderCal(); };
 
-// ═══════════════════════════════════
+// -------------------------------------------------------------------
 //  EXPENSES
-// ═══════════════════════════════════
+// -------------------------------------------------------------------
 function bKey(d){ return `${d.getFullYear()}-${pad(d.getMonth()+1)}`; }
+
+function monthlyItems(d){
+  return expenses[bKey(d)] || [];
+}
+
+function categoryStats(items){
+  const byCat = {};
+  items.forEach(item => {
+    const cat = item.cat || 'Other';
+    if(!byCat[cat]) byCat[cat] = {cat, total:0, count:0};
+    byCat[cat].total += parseFloat(item.amount) || 0;
+    byCat[cat].count += 1;
+  });
+  return Object.values(byCat).sort((a,b) => b.total - a.total);
+}
+
+function renderExpenseStats(items, spent){
+  const stats = categoryStats(items);
+  const top = stats[0];
+
+  document.getElementById('statCount').textContent = items.length;
+  document.getElementById('statAvg').textContent = money(items.length ? spent / items.length : 0);
+  document.getElementById('statTop').textContent = top ? top.cat : '-';
+
+  const g = document.getElementById('catStats');
+  g.innerHTML = '';
+
+  if(!stats.length){
+    g.innerHTML = `<div class="empty"><div class="empty-t">No category data yet</div><div class="empty-s">Add expenses to see your monthly breakdown</div></div>`;
+    return;
+  }
+
+  stats.forEach(stat => {
+    const pct = spent ? (stat.total / spent) * 100 : 0;
+    const row = document.createElement('div');
+    row.className = 'cat-row';
+    row.innerHTML = `
+      <div class="exp-ico" style="background:${CAT_BG[stat.cat]||'#F5F5F5'}">${CAT_EMO[stat.cat]||'Ot'}</div>
+      <div class="cat-main">
+        <div class="cat-top">
+          <span class="cat-name">${esc(stat.cat)}</span>
+          <span class="cat-amt">${money(stat.total)}</span>
+        </div>
+        <div class="cat-bar"><div class="cat-fill" style="width:${pct.toFixed(1)}%"></div></div>
+        <div class="cat-meta">${stat.count} transaction${stat.count===1?'':'s'} - ${pct.toFixed(0)}% of spending</div>
+      </div>
+    `;
+    g.appendChild(row);
+  });
+}
 
 function renderExp(){
   const key=bKey(budDate);
-  const items=expenses[key]||[];
+  const items=monthlyItems(budDate);
   const spent=items.reduce((s,e)=>s+(parseFloat(e.amount)||0),0);
   const rem=INCOME-spent;
   const pct=Math.min((spent/INCOME)*100,100);
@@ -880,16 +802,17 @@ function renderExp(){
   document.getElementById('expSub').textContent=`${ML[budDate.getMonth()]} ${budDate.getFullYear()}`;
   document.getElementById('budAmt').textContent=(rem<0?'-$':'$')+Math.abs(rem).toFixed(0);
   document.getElementById('budAmt').className='bud-amt'+(rem<0?' neg':'');
-  document.getElementById('budSpent').textContent=`$${spent.toFixed(0)} spent`;
+  document.getElementById('budSpent').textContent=`${money(spent)} spent`;
   document.getElementById('budIncome').textContent=`of $${INCOME}`;
   document.getElementById('budFill').style.width=pct+'%';
   document.getElementById('budFill').className='bud-fill'+(rem<0?' ov':'');
+  renderExpenseStats(items, spent);
 
   const g=document.getElementById('expGroup');
   g.innerHTML='';
 
   if(!items.length){
-    g.innerHTML=`<div class="empty"><div class="empty-ic">💸</div><div class="empty-t">No expenses yet</div><div class="empty-s">Tap + Add Expense below</div></div>`;
+    g.innerHTML=`<div class="empty"><div class="empty-t">No expenses yet</div><div class="empty-s">Tap + Add Expense below</div></div>`;
     return;
   }
 
@@ -897,14 +820,14 @@ function renderExp(){
     const row=document.createElement('div');
     row.className='exp-row';
     row.innerHTML=`
-      <div class="exp-ico" style="background:${CAT_BG[item.cat]||'#F5F5F5'}">${CAT_EMO[item.cat]||'📦'}</div>
+      <div class="exp-ico" style="background:${CAT_BG[item.cat]||'#F5F5F5'}">${CAT_EMO[item.cat]||'Ot'}</div>
       <div class="exp-txt">
-        <div class="exp-name">${item.name}</div>
-        <div class="exp-cat">${item.cat}</div>
+        <div class="exp-name">${esc(item.name)}</div>
+        <div class="exp-cat">${esc(item.cat)}</div>
       </div>
-      <input class="exp-inp" type="number" value="${parseFloat(item.amount).toFixed(2)}"
+      <input class="exp-inp" type="number" value="${(parseFloat(item.amount)||0).toFixed(2)}"
              inputmode="decimal" min="0" step="0.01" data-id="${item.id}" />
-      <button class="exp-del" data-id="${item.id}" aria-label="Delete">×</button>
+      <button class="exp-del" data-id="${item.id}" aria-label="Delete">x</button>
     `;
     row.querySelector('.exp-inp').addEventListener('change',e=>{
       const l=expenses[key];
@@ -935,7 +858,7 @@ document.getElementById('expSave').onclick=()=>{
   const name=document.getElementById('expName').value.trim();
   const amount=parseFloat(document.getElementById('expAmt').value)||0;
   const cat=document.getElementById('expCat').value;
-  if(!name) return;
+  if(!name || amount<=0) return;
   const key=bKey(budDate);
   if(!expenses[key]) expenses[key]=[];
   expenses[key].push({id:Date.now().toString(),name,cat,amount});
@@ -945,9 +868,9 @@ document.getElementById('expSave').onclick=()=>{
   document.getElementById('expSheet').classList.remove('open');
 };
 
-// ═══════════════════════════════════
+// -------------------------------------------------------------------
 //  TABS
-// ═══════════════════════════════════
+// -------------------------------------------------------------------
 document.querySelectorAll('.tab').forEach(btn=>{
   btn.addEventListener('click',()=>{
     document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
@@ -958,26 +881,12 @@ document.querySelectorAll('.tab').forEach(btn=>{
   });
 });
 
-// ═══════════════════════════════════
-//  INIT + MIDNIGHT RESET
-// ═══════════════════════════════════
-renderChecks();
-renderTodayEvs();
+// -------------------------------------------------------------------
+//  INIT
+// -------------------------------------------------------------------
 renderCal();
 renderExp();
 
-function schedMidnight(){
-  const now=new Date();
-  const next=new Date(now.getFullYear(),now.getMonth(),now.getDate()+1,0,0,3);
-  setTimeout(()=>{
-    checks={};
-    renderChecks();
-    updateHeader();
-    renderTodayEvs();
-    schedMidnight();
-  }, next-now);
-}
-schedMidnight();
 </script>
 </body>
 </html>
